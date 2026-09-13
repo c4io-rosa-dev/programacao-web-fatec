@@ -1,0 +1,44 @@
+<header>
+  <img src="logotipo.jpg" id="logotipo">
+  <!--barra busca-->
+  <nav>
+    <div class="btn-group">
+      <a href="cadastro" class="btn btn-dark">Cadastro</a> 
+      <a href="cesta" class="btn btn-dark">Cesta</a> 
+      <a href="login" class="btn btn-dark">Entrar</a>
+      <a href="vitrine" class="btn btn-dark">Promoções</a>
+      </div>
+  </nav>
+</header>
+<div>
+  <router-outlet />
+</div>
+<footer class="rodape mt-4">
+  <div class="container py-4">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h5 class="fw-bold">Loja de Ferragens</h5>
+        <p class="mb-0">Tudo para sua obra, reforma e manutenção com os melhores preços.</p>
+      </div>
+      <div class="col-md-4">
+        <h5 class="fw-bold">Links</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="vitrine" class="rodape-link">Promoções</a></li>
+          <li><a href="cadastro" class="rodape-link">Cadastro</a></li>
+          <li><a href="login" class="rodape-link">Entrar</a></li>
+          <li><a href="cesta" class="rodape-link">Cesta</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="fw-bold">Contato</h5>
+        <ul class="list-unstyled mb-0">
+          <li>Rua das Ferramentas, 123</li>
+          <li>(11) 99999-9999</li>
+          <li>contato@lojadeferragens.com.br</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-3">
+    <p class="text-center small mb-0">&copy; 2026 Loja de Ferragens. Todos os direitos reservados.</p>
+  </div>
+</footer>

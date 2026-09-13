@@ -1,0 +1,22 @@
+.rodape {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+.rodape h5 {
+    color: #ffc107;
+    margin-bottom: 12px;
+}
+
+.rodape-link {
+    color: #ced4da;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 0;
+    transition: color 0.2s;
+}
+
+.rodape-link:hover {
+    color: #ffc107;
+    text-decoration: underline;
+}
