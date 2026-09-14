@@ -3,7 +3,7 @@ import { Cadastro } from './cadastro/cadastro';
 import { Cesta } from './cesta/cesta';
 import { Detalhe } from './detalhe/detalhe';
 import { Login } from './login/login';
-import { Pedido } from './model/pedido';
+import { Pedido } from './pedido/pedido';
 import { Reenvio } from './reenvio/reenvio';
 import { ResultadoBusca } from './resultado-busca/resultado-busca';
 import { Vitrine } from './vitrine/vitrine';

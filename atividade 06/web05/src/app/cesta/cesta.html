@@ -1,1 +1,56 @@
-<p>cesta works!</p>
+<h3>Cesta de compras</h3>
+
+<div class="alert alert-warning" *ngIf="lista.length<=0"><strong>Vazio!</strong>
+    não existem produtos na sua cesta!</div>
+
+<div class="row" *ngIf="lista.length>0">
+
+    <!-- coluna dos itens -->
+    <div class="col-12 col-lg-8">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Produto</th>
+                    <th class="text-center">Qtd</th>
+                    <th class="text-end">Valor unit.</th>
+                    <th class="text-end">Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of lista">
+                    <td>
+                        <strong>{{item.produto.nome}}</strong>
+                        <span class="badge bg-danger ms-1" *ngIf="item.produto.promo>0">promoção</span><br>
+                        <small class="text-muted">{{item.produto.descritivo}}</small>
+                    </td>
+                    <td class="text-center">{{item.quantidade}}</td>
+                    <td class="text-end">
+                        <span *ngIf="item.produto.promo>0"><s class="text-muted">R$ {{item.produto.valor}}</s><br></span>
+                        R$ {{item.valorUnitario}}
+                    </td>
+                    <td class="text-end">R$ {{subtotal(item)}}</td>
+                    <td class="text-end">
+                        <button type="button" class="btn btn-sm btn-outline-danger" (click)="remover(item)">remover</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- coluna do resumo -->
+    <div class="col-12 col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Resumo</h4>
+                <p class="card-text">
+                    Itens na cesta: {{totalItens()}}<br>
+                    <strong>Total: R$ {{total()}}</strong>
+                </p>
+                <a href="pedido" class="btn btn-success w-100 mb-2">finalizar compra</a>
+                <a href="vitrine" class="btn btn-primary w-100">continuar comprando</a>
+            </div>
+        </div>
+    </div>
+
+</div>
